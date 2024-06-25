@@ -211,7 +211,7 @@
         price: 1579,
       },
       {
-        image: "https://m.media-amazon.com/images/G/29/apparel/rcxgs/tile._CB483369964_.gif",
+        image: "https://m.media-amazon.com/images/I/71+SlGD0mSL._AC_SL1500_.jpg",
         Pname: "Lenovo LOQ 15IRH8",
         quantity: 659201,
         price: 821,
@@ -257,7 +257,7 @@
 
         JSimg.setAttribute("src", products[i].image);
         PImage.appendChild(JSimg);
-        PrName.innerText = products[i].PName;
+        PrName.innerText = products[i].Pname;
         PQuantity.innerText = products[i].quantity;
         PPrice.innerText = products[i].price;
 
@@ -280,7 +280,7 @@
      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
   */
     const newProduct = {
-      image: 'https://m.media-amazon.com/images/I/71NxKpg1NIL._AC_UL320_.jpg',
+      image: "https://m.media-amazon.com/images/I/71XLuruCskL._AC_SL1500_.jpg",
       Pname: 'ASUS TUF Gaming F15',
       quantity: 9,
       price: 999,
@@ -297,7 +297,7 @@
       const PPrice = document.createElement("td");
       const JSimg = document.createElement("img");
 
-      JSimg.getAttribute("src", products.image)
+      JSimg.setAttribute("src", products.image);
       PImage.appendChild(JSimg);
       PrName.innerText = products.Pname;
       PQuantity.innerText = products.quantity;
@@ -314,7 +314,7 @@
 
     };
 
-    addRow();
+    addRow(newProduct);
     /* ESERCIZIO 14
     Crea una funzione che nasconda le immagini della tabella quando eseguita
   */
@@ -324,7 +324,7 @@
       images.forEach(image => (image.style.display = 'none'));
     };
 
-    hideAllImages();
+    //hideAllImages();
     /* EXTRA ESERCIZIO 15
     Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
   */
@@ -332,13 +332,13 @@
 
     const changeColorWithRandom = function () {
       const change = document.getElementById("changeMyColor");
-      change.addEventListener("click", function () {
-        const red = Math.floor(Math.random() * 256);
-        const green = Math.floor(Math.random() * 256);
-        const blue = Math.floor(Math.random() * 256);
-        const newColor = `rgb(${red}, ${green}, ${blue})`;
-        change.style.color = newColor;
-      });
+        change.addEventListener("click", function () {
+          const red = Math.floor(Math.random() * 256);
+          const green = Math.floor(Math.random() * 256);
+          const blue = Math.floor(Math.random() * 256);
+          const newColor = `rgb(${red}, ${green}, ${blue})`;
+          change.style.color = newColor;
+        });
     };
 
     changeColorWithRandom();  
