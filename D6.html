@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pratica Epicode U1S3G2</title>
     <style>
       *,
       *::before,
@@ -83,33 +83,56 @@
       /* ESERCIZIO 1
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
+    const title = document.querySelector('h1');
 
-      const changeTitle = function () {}
+      function changeTitle(){
+      title.innerText = "titolo moddato";
+      }
 
+      changeTitle();
       /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
+      function addClass(){
+        title.classList = "myHeading";
+      }
 
-      const addClassToTitle = function () {}
+      addClass();
 
       /* ESERCIZIO 3
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
 
-      const changePcontent = function () {}
-
+      const pi = document.querySelectorAll("div p");
+      
+      function Changep(){
+        pi.forEach(el => {el.innerText = "lorem porcaputtana"})
+      }
+      
+      Changep();
       /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
+      const linK = document.querySelectorAll("body a:not(:last-child)");
 
-      const changeUrls = function () {}
-
+      function ChangeLink(){
+        linK.forEach(el => {
+          el.href = "https://www.google.com"})
+      }
+     
+      ChangeLink()
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
+    const list2 = document.getElementById("secondList");
 
-      const addToTheSecond = function () {}
+    function addEl(){
+      const liadded = document.createElement("li");
+      liadded.innerText = "Added";
+      list2.appendChild(liadded);
+    }
 
+    addEl();
       /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un paragrafo al primo div
     */
